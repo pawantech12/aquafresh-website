@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import { Zap, Leaf, Heart, Award, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -49,7 +49,7 @@ export default function ProductShowcase() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.8, ease: easeOut }
     }
   };
 
@@ -101,7 +101,7 @@ export default function ProductShowcase() {
                     <Award className="w-5 h-5 text-yellow-500" />
                   </motion.div>
                 </div>
-                
+
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start mb-3">
                     <div>
@@ -114,7 +114,7 @@ export default function ProductShowcase() {
                       {product.price}
                     </span>
                   </div>
-                  
+
                   <div className="space-y-2 mb-6">
                     {product.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -123,7 +123,7 @@ export default function ProductShowcase() {
                       </div>
                     ))}
                   </div>
-                  
+
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button className={`w-full bg-gradient-to-r ${product.color} hover:shadow-lg transition-all duration-300 group`}>
                       Add to Cart
