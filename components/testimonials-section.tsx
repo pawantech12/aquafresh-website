@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.8, ease: easeOut }
     }
   };
 
@@ -88,11 +88,11 @@ export default function TestimonialsSection() {
                   >
                     <Quote className="w-8 h-8 text-cyan-500 mb-4" />
                   </motion.div>
-                  
+
                   <p className="text-gray-700 mb-6 leading-relaxed italic">
                     "{testimonial.text}"
                   </p>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <Avatar className="w-12 h-12">
