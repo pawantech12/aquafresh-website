@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import { Leaf, Zap, Heart, Shield, Droplets, Sun } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -60,7 +60,7 @@ export default function FeaturesSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: easeOut }
     }
   };
 
@@ -81,7 +81,7 @@ export default function FeaturesSection() {
             <span className="text-gray-800"> AquaFresh?</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover the perfect blend of taste, nutrition, and refreshment that makes AquaFresh 
+            Discover the perfect blend of taste, nutrition, and refreshment that makes AquaFresh
             the premium choice for health-conscious individuals.
           </p>
         </motion.div>
