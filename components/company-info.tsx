@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -48,7 +48,7 @@ export default function CompanyInfo() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: easeOut }
     }
   };
 
@@ -105,7 +105,7 @@ export default function CompanyInfo() {
       >
         <h3 className="font-semibold text-gray-800 mb-3">Quick Response Promise</h3>
         <p className="text-gray-600 text-sm leading-relaxed">
-          We typically respond to all inquiries within 24 hours. For urgent matters, 
+          We typically respond to all inquiries within 24 hours. For urgent matters,
           please call us directly during business hours.
         </p>
       </motion.div>
