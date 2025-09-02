@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, easeOut, easeInOut } from 'framer-motion';
+
 import { ArrowRight, Star, Award, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -21,7 +22,7 @@ export default function HeroSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.8, ease: easeOut }
     }
   };
 
@@ -31,7 +32,7 @@ export default function HeroSection() {
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: easeInOut
       }
     }
   };
@@ -84,7 +85,7 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-lg sm:text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed"
             >
-              Experience the perfect blend of natural flavors and essential nutrients in every refreshing sip. 
+              Experience the perfect blend of natural flavors and essential nutrients in every refreshing sip.
               Our premium beverage is crafted with the finest ingredients for your active lifestyle.
             </motion.p>
 
@@ -137,7 +138,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1, ease: easeOut }}
             className="relative flex justify-center"
           >
             <motion.div
@@ -153,18 +154,18 @@ export default function HeroSection() {
                     {/* Liquid Animation */}
                     <motion.div
                       animate={{ y: [0, -10, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      transition={{ duration: 2, repeat: Infinity, ease: easeInOut }}
                       className="absolute inset-0 bg-gradient-to-t from-blue-600 to-cyan-400 rounded-full"
                     />
                     {/* Bubbles Effect */}
                     <motion.div
                       animate={{ y: [100, -20], opacity: [0, 1, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      transition={{ duration: 2, repeat: Infinity, ease: easeInOut }}
                       className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white/60 rounded-full"
                     />
                     <motion.div
                       animate={{ y: [100, -20], opacity: [0, 1, 0] }}
-                      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                      transition={{ duration: 2.5, repeat: Infinity, ease: easeInOut, delay: 0.5 }}
                       className="absolute bottom-0 left-1/3 w-1.5 h-1.5 bg-white/40 rounded-full"
                     />
                     {/* Bottle Cap */}
@@ -187,7 +188,7 @@ export default function HeroSection() {
                   x: [-3, 3, -3],
                   rotate: [0, 5, 0]
                 }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 4, repeat: Infinity, ease: easeInOut }}
                 className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full opacity-60 blur-sm"
               />
               <motion.div
@@ -196,7 +197,7 @@ export default function HeroSection() {
                   x: [3, -3, 3],
                   rotate: [0, -5, 0]
                 }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: easeInOut, delay: 1 }}
                 className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-50 blur-sm"
               />
             </motion.div>
